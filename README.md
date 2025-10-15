@@ -1,4 +1,4 @@
-#Dotfiler wezterm config
+# Dotfiler wezterm config
 
 This repository contains wezterm config.
 It's purpose to be used as a repository for [dotfiler][].
