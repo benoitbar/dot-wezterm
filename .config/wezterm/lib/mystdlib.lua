@@ -7,7 +7,13 @@ function mytable.merge_all(...)
   local ret = {}
   for _, tbl in ipairs({ ... }) do
     for k, v in pairs(tbl) do
-      ret[k] = v
+      if type(ret[k]) == "table" and k == "keys" then
+        for _, ov in ipairs(v) do
+          table.insert(ret[k], ov)
+        end
+      else
+        ret[k] = v
+      end
     end
   end
   return ret
