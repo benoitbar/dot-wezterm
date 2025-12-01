@@ -4,6 +4,8 @@ local mytable = require("lib/mystdlib").mytable
 local act = wezterm.action
 local config = wezterm.config_builder()
 
+config.enable_wayland = true
+
 config.color_scheme = "Tango (terminal.sexy)"
 config.default_prog = { "/usr/bin/zsh" }
 config.font = wezterm.font("Hack")
